@@ -13,6 +13,6 @@ For complete installation instructions, view INSTALL.txt
 
 # Contributors
 
-Ayian Shariff
-Christian Carlo
-Jospeh Belman
+* Ayian Shariff
+* Christian Carlo
+* Jospeh Belman
