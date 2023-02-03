@@ -1,0 +1,4 @@
+(library
+ (name snake)
+ (public_name SnakeGame)
+ (libraries graphics))

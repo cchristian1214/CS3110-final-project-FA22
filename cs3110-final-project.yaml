@@ -1,0 +1,35 @@
+---
+# Members of your group.
+group:
+  - name: Christian Carlo
+    netid: cnc48
+  - name: Ayian Shariff
+    netid: as2964
+  - name: Joseph Belman 
+    netid: jwb373
+# Your PM.
+pm:
+  name: William Nguyen
+  netid: wtn4
+# Set to false if you don't want your gallery entry to be public.
+publish: true
+# Pithy title
+title: "Snakes and Ladders"
+# OK if this is a Cornell Github link, but public gallery viewers won't be able to see it.
+git-repo: "https://github.coecis.cornell.edu/cnc48/cs3110-final-project"
+# If you have no demo screencast, replace the url string with an empty string ""
+demo-video-url: ""
+# Write a short, attention-grabbing description of your project.
+desc: >  
+This project simulates a 2 player game of snakes and ladders. The objective of this 
+game is to be the first player to reach the square containing the number 100 and the game
+will end once one player reaches this square. The game will be played on a 10x10 board
+containing both snakes and ladders. Each player will take turns moving by rolling a
+six sided die and moving by the number of steps the die lands on to the right.
+If a player rolls a six, he/she can roll again before the other player gets a chance to 
+roll. However, no player can roll a die more than two consecutive times. When a player
+lands on a square containing the face of a snake, he/she will move down to the square
+containing the tail of a snake. When a player lands on a square containing the bottom
+rung of a ladder, he/she will move up to the square containing the top rung of the ladder.
+The game will contain multiple snakes and ladders with varying lengths. At the end of each 
+game, the winner will be displayed on a separate screen alongside an option to play a new game.

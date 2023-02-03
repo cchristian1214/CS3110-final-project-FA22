@@ -1,0 +1,74 @@
+INSTALLATION INSTRUCTIONS FOR CS-3110 FINAL PROJECT
+
+1 - INSTALLING GRAPHICS
+
+To begin, you must first install a new OPAM package. Thus, begin by launching OPAM.
+
+On Windows and Linux, this is accomplished through the Ubuntu program.
+On MacOS, this is accomplished through Homebrew.
+
+Once we are able to interface with OPAM, type the following command (minus the quotations!):
+
+"opam depext --install graphics"
+
+If you are prompted to confirm, type "Y".
+
+Once this graphics package is installed, we now need to install a way for the program to launch within its own
+Graphical User Interface (GUI):
+
+2 - GUI ON UBUNTU
+
+If you are using Ubuntu, the WSL system within the Linux shell for Ubuntu requires the installataion of an XServer
+in order to be able to launch the GUI. 
+
+To start this process, begin by installing some new OPAM packages. Enter these commands in the Ubuntu command line:
+
+"sudo apt install xfce4 -y"
+"sudo apt install xfce4-goodies -y"
+"sido apt install x11-apps -y"
+
+Once these are installed, enter the following commands:
+
+"cd ~"
+"nano .bashrc"
+
+This should open a screen with a lot of code. Use the arrow keys to navigate all the way to the bottom of the screen
+and enter the following lines (without the quotations):
+"eval $(opam env)"
+"export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0"
+"export LIBGL_ALWAYS_INDIRECT=1"
+
+After that, press the keys Control and X together to exit, following by entering Y to save the changes made and
+then press the Enter key to confirm. 
+
+Next, download the XServer VcXsrv at this link: https://sourceforge.net/projects/vcxsrv/
+Press the Download button and follow the installation by running the .exe downloaded.
+
+Next, to launch our installed server, go to the Start Menu on your system and search for "XLaunch".
+The result should be an application with a large X as a logo. Launch it, and choose the option 
+"Multiple Windows" on the screen that next appears. Then click the "next" button. Click the next button again
+on the next screen that appears. Finally, select the option "Disable access control" on the screen that appears and
+click next, and then finish.
+
+Now that this is complete, proceed to the section "RUNNING THE PROGRAM."
+
+3 - GUI FOR MACOS
+
+From Homebrew, run the command "brew install xquartz"
+This is all the required initialization, XQuartz is far more intuitive to use.
+
+4 - ALL USERS
+
+Make sure to restart your computer, as the installed programs and packages may not work without a restart.
+
+5 - RUNNING THE PROGRAM
+
+If you had to install an XServer, make sure the you have launched XLaunch and that your XServer is running,
+or the program will appear to not function.
+
+Assuming you have downloaded the .zip containing the program to the downloads folder on the C storage drive of your computer, use whatever command line (either Homebrew or Ubuntu)
+to enter the command "cp /mnt/c/Users/<your Windows user name>/Downloads/ms2_code.zip ." 
+(take note to inclue the .). Next run the command "unzip ms2_code.zip" to create a new directory named "ms2_code". 
+Navigate into it using the command "cd ms2_code". Once in this directory, you must first build the program to
+initialize it. To do this, run the command "make build" from the command line. Once the program is built, it can 
+be run by typing the command "make play" onto the command line!
